@@ -4,11 +4,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+
 }
 
 .calculator {
@@ -52,7 +48,7 @@ body {
     align-items: center;
     color: white;
     font-size: 28px;
-    background-color: darkgray;
+    background-color: #454545;
     border-radius: 100px;
     width: 60px;
     height: 60px;
@@ -64,4 +60,37 @@ body {
 
 #clear {
     background-color: darkgrey;
+}
+
+#num {
+    padding: 15px 22px;
+    margin: 0;
+    border-radius: 100px;
+    border: none;
+    background-color: #454545;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+}
+
+#c {
+    padding: 15px 22px;
+    margin: 0;
+    border-radius: 100px;
+    border: none;
+    background-color: darkgrey;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+}
+
+#operatorButton {
+    padding: 12px 22px;
+    margin: 0;
+    border-radius: 100px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
 }

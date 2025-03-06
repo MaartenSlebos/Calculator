@@ -18,22 +18,22 @@
         </div>
 
         <div class="buttons">
-            <div class="button">7</div>
-            <div class="button">8</div>
-            <div class="button">9</div>
-            <div class="button" id="operator">x</div>
-            <div class="button">4</div>
-            <div class="button">5</div>
-            <div class="button">6</div>
-            <div class="button" id="operator">-</div>
-            <div class="button">1</div>
-            <div class="button">2</div>
-            <div class="button">3</div>
-            <div class="button" id="operator">+</div>
-            <div class="button"></div>
-            <div class="button" id="zero">0</div>
-            <div class="button" id="clear">C</div>
-            <div class="button" id="operator">=</div>
+            <div class="button"><button id="num" onclick="workingButton()">7</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">8</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">9</button></div>
+            <div class="button" id="operator"><button id="operatorButton" onclick="operate('divide')">÷</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">4</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">5</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">6</button></div>
+            <div class="button" id="operator"><button id="operatorButton" onclick="operate('multiply')">x</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">1</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">2</button></div>
+            <div class="button"><button id="num" onclick="workingButton()">3</button></div>
+            <div class="button" id="operator"><button id="operatorButton" onclick="operate('substract')">-</button></div>
+            <div class="button" id="clear"><button id="c" onclick="workingButton()">C</button></div>
+            <div class="button" id="zero"><button id="num" onclick="workingButton()">0</button></div>
+            <div class="button" id="operator"><button id="operatorButton" onclick="workingButton()">=</button></div>
+            <div class="button" id="operator"><button id="operatorButton" onclick="operate('add')">+</button></div>
 
         </div>
 
