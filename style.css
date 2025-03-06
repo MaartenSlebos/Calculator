@@ -1,3 +1,34 @@
 body {
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    background-color: white;
+    border: 2px;
+    margin-top: 25px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 40px;
+}
+
+.screen {
+    background-color: grey;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.buttons {
+    background-color: lightgrey;
+    height: 400px;
+    width: 300px;
+    border-radius: 5px;
 }
