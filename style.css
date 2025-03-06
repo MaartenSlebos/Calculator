@@ -3,32 +3,65 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
-    height: 600px;
-    width: 400px;
-    background-color: white;
-    border: 2px;
-    margin-top: 25px;
+    height: 580px;
+    width: 360px;
+    background-color: black;
+    border-style: solid;
+    border-color: darkgrey;
+    margin-top: 50px;
     border-radius: 10px;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 .screen {
-    background-color: grey;
+    background-color: lightgrey;
     height: 100px;
-    width: 300px;
+    width: 320px;
     border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 28px;
 }
 
 .buttons {
-    background-color: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
     height: 400px;
     width: 300px;
     border-radius: 5px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    background-color: darkgray;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+}
+
+#operator {
+    background-color: orange;
+}
+
+#clear {
+    background-color: darkgrey;
 }
