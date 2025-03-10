@@ -7,6 +7,10 @@ body {
 
 }
 
+p {
+    margin: 0px;
+}
+
 .calculator {
     display: flex;
     flex-direction: column;
@@ -22,11 +26,20 @@ body {
 }
 
 .screen {
+    text-align: end;
     background-color: lightgrey;
     height: 100px;
     width: 320px;
     border-radius: 5px;
     margin-top: 28px;
+    display: flex;             
+    align-items: flex-end;     
+    justify-content: flex-end; 
+}
+
+#screenText {
+    margin-right: 5px;
+    font-size: 36px;
 }
 
 .buttons {
