@@ -15,7 +15,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if (b === 0) {
-        return "Can't divide by zero, genius!";
+        return "N/A";
     }
     return a / b;
 }
