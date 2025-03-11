@@ -15,7 +15,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if (b === 0) {
-        return "N/A";
+        return "Can't divide by zero, genius!";
     }
     return a / b;
 }
@@ -32,7 +32,6 @@ function operate(operator, num1, num2) {
             default: return "Error: Invalid operator";
         }
     })();
-    // Round to 10 digits to prevent overflow
     return typeof result === 'number' ? Number(result.toFixed(10)) : result;
 }
 
@@ -40,7 +39,7 @@ function operate(operator, num1, num2) {
 let firstNumber = '';
 let operator = '';
 let secondNumber = '';
-let lastResult = null; // To track if we're starting from a result
+let lastResult = null; // Tracks if we have a result
 const MAX_DIGITS = 10;
 
 // Get DOM elements
@@ -65,7 +64,7 @@ function clearCalculator() {
 
 // Function to handle digit button clicks
 function handleDigitClick(digit) {
-    if (lastResult !== null) { // If there's a result, start fresh
+    if (lastResult !== null && operator === '') { // Only clear if no operator after result
         clearCalculator();
     }
     if (operator === '') { // Building first number
@@ -77,6 +76,7 @@ function handleDigitClick(digit) {
         if (secondNumber.length < MAX_DIGITS) {
             secondNumber += digit;
             updateDisplay(`${firstNumber} ${operator} ${secondNumber}`);
+            lastResult = null; // Reset lastResult as we’re building a new operation
         }
     }
 }
@@ -92,7 +92,6 @@ function handleOperatorClick(op) {
             secondNumber = '';
             lastResult = result; // Mark that we have a result
         }
-        // Do nothing if = pressed without full input
     } else {
         // If we have a complete operation, evaluate it first
         if (firstNumber && operator && secondNumber) {
@@ -101,12 +100,12 @@ function handleOperatorClick(op) {
             secondNumber = '';
             lastResult = result;
             operator = op; // Use new operator for next operation
-            updateDisplay(firstNumber + " " + op);
+            updateDisplay(`${firstNumber} ${operator}`);
         } else if (firstNumber !== '') { // Just set operator if no second number yet
             operator = op;
+            lastResult = null; // Reset lastResult since we’re continuing
             updateDisplay(`${firstNumber} ${operator}`);
         }
-        // If no firstNumber, do nothing
     }
 }
 
